@@ -18,4 +18,4 @@ cache:
   - $HOME/share
 
 script:
-  - $HOME/bin/clojure -C:test -m test-runner
+  - $HOME/bin/clojure -A:test
