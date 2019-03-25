@@ -1,0 +1,8 @@
+language: clojure
+
+sudo: false
+jdk:
+  - openjdk11
+
+script:
+  - clj -C:test -m test-runner
