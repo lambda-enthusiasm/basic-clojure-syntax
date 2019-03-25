@@ -1,4 +1,4 @@
 (ns core)
 
 (defn one []
-  0)
+  1)
