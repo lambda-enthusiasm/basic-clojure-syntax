@@ -1,8 +1,21 @@
-language: clojure
+suod: false
+language: java
 
 sudo: false
 jdk:
   - openjdk11
 
+install:
+  - curl -O https://download.clojure.org/install/linux-install-1.10.0.442.sh
+  - chmod +x linux-install-1.10.0.442.sh
+  - ./linux-install-1.10.0.442.sh -p $HOME
+
+cache:
+  directories:
+  - $HOME/.m2
+  - $HOME/bin
+  - $HOME/lib
+  - $HOME/share
+
 script:
-  - clj -C:test -m test-runner
+  - $HOME/bin/clojure -C:test -m test-runner
